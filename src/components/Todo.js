@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import AddTask from './AddTask'
 import TodoHeader from './TodoHeader'
 
 export class Todo extends Component {
@@ -12,6 +13,11 @@ export class Todo extends Component {
         }
     }
     
+    // function to add task to the list
+    addTask = () => {
+        console.log("button clicked")
+    } 
+    
     render() {
         return (
             <div className="container text-left">
@@ -19,7 +25,10 @@ export class Todo extends Component {
                     {this.props.subjectName}
                 </div>
                 <TodoHeader />
+                {
 
+                }
+                <AddTask addTaskHandler={this.addTask} />
             </div>
         )
     }
