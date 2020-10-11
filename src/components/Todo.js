@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import AddTask from './AddTask'
+import Task from './Task'
 import TodoHeader from './TodoHeader'
 
 export class Todo extends Component {
@@ -17,7 +18,7 @@ export class Todo extends Component {
     addTask = () => {
         console.log("button clicked")
     } 
-    
+
     render() {
         return (
             <div className="container text-left">
@@ -25,6 +26,7 @@ export class Todo extends Component {
                     {this.props.subjectName}
                 </div>
                 <TodoHeader />
+                <Task indent="0" />
                 {
 
                 }

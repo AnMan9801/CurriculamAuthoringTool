@@ -46,5 +46,11 @@ Extra Defined classes
 
 /* classes for color */
 
+.task-l0{
+  color : rgb(47, 255, 220);
+}
 
+.btn-task{
+  color: #00000060;
+}
 
