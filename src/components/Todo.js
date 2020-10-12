@@ -8,37 +8,48 @@ export class Todo extends Component {
         super(props)
     
         this.state = {
-            currentIndent: "0",
+            latestIndent: "0",
+            latestTaskIndex: "0",
             dataArray: [
                 {
-                    index: ".0",
+                    index: "0",
                     level: "0",
                     textTask: null,
                 },
-                {
-                    index: ".1",
-                    level: "0",
-                    textTask: null,
-                }
             ]
         }
     }
     
     // function to add task to the list
     addTask = () => {
-        console.log("button clicked")
+        console.log("button clicked");
+        const taskElement = {
+            index: "0",
+            level: "0",
+            textTask: null,
+        }
+        const dataRow = this.state.dataArray;
+        let previousIndexArray = dataRow[dataRow.length - 1]["index"].split(".");
+        previousIndexArray[previousIndexArray.length - 1] = parseInt(previousIndexArray[previousIndexArray.length - 1]) + 1;
+
+        taskElement["index"] = previousIndexArray.join(".");
+        taskElement["level"] = dataRow[dataRow.length - 1]["level"];
+
+        dataRow.push(taskElement);
+
+        this.setState({
+            dataArray: dataRow
+        })
     } 
 
     // function to update task
     updateTask = (id, event) => {
-        console.log(event.target.value);
-
         const dataRow = this.state.dataArray;
         dataRow[id]["textTask"] = event.target.value;
         this.setState({
-            dataTree: dataRow
-        },
-        () => {console.log(this.state.dataTree)}
+            dataArray: dataRow
+        }
+        //, () => {console.log(this.state.dataTree)}
         )
     }
 

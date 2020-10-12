@@ -8,7 +8,7 @@ export class Task extends Component {
         return (
             <div className="row border-top border-bottom font-weight-bold text-secondary ">
             <TaskUtilityBtns/>
-            <div className={`row col-10 pl-${indent} text-wrap text-break`}>
+            <div className={`row col-10 task-p${indent} text-wrap text-break`}>
                 <div className="col-1">
                     <div className="col-2 bg-light pt-2 pb-2">-</div>
                 </div>
