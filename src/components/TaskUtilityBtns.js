@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class TaskUtilityBtns extends Component {
-    render() {
-        return (
-            <div className="col-2 p-0">
+function TaskUtilityBtns({id, utilIndent, utilOutdent, utilDelete}) {
+    return (
+        <div className="col-2 p-0">
 
                 <div className=" btn-group mr-2" role="group" aria-label="First group">
                     {/* Move Icon */}
@@ -16,7 +15,12 @@ export class TaskUtilityBtns extends Component {
                     </button>
                     {/* Out Dent Icon */}
 
-                    <button className="btn pl-0 pr-1 btn-task">
+                <button  onClick = {
+                    () => {
+                        utilOutdent(id)
+                    }
+                }
+                    className="btn pl-0 pr-1 btn-task">
                         <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-arrow-left" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd"
@@ -25,13 +29,23 @@ export class TaskUtilityBtns extends Component {
                     </button>
 
                     {/* Indent Icon */}
-                    <button className="btn pl-0 pr-1 btn-task">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-arrow-right" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fillRule="evenodd"
-                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                        </svg>
-                    </button>
+                < button onClick = {
+                    () => {
+                        utilIndent(id)
+                    }
+                }
+                className = "btn pl-0 pr-1 btn-task" >
+                    <svg width = "1em"
+                height = "1em"
+                viewBox = "0 0 16 16"
+                className = "bi bi-arrow-right"
+                fill = "currentColor"
+                xmlns = "http://www.w3.org/2000/svg" >
+                    <
+                    path fillRule = "evenodd"
+                d = "M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" / >
+                    </svg>
+                </button>
 
                     {/* Delete Icon */}
                     <button className="btn pl-0 pr-1 btn-task">
@@ -44,9 +58,7 @@ export class TaskUtilityBtns extends Component {
                 </div>
                 
             </div>
-
-        )
-    }
+    )
 }
 
 export default TaskUtilityBtns
