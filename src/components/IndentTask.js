@@ -12,7 +12,7 @@ const IndentTask = async ({ id, dataRaw }) => {
     }
     // For loop to indent all child 
     for (let index = id + 1; index < dataRaw.length; index++) {
-        if (dataRaw[id]["level"] == (dataRaw[index]["level"])) {
+        if (dataRaw[id]["level"] >= (dataRaw[index]["level"])) {
             break;
         }
         dataRaw[index]["level"]++;
@@ -23,28 +23,3 @@ const IndentTask = async ({ id, dataRaw }) => {
 }
 
 export default IndentTask
-
-
-    // // fUNCTION TO CALL FROM UTILLiNDENT
-    // AupdateLevel = async(id) => { // Manage lavel for indent
-    //     let dataRaw = this.state.dataArray;
-
-    //     // cannot indent first task
-    //     if (id == 0) {
-    //         return dataRaw;
-    //     }
-    //     // cannot indent more than one level to parent
-    //     if (dataRaw[id]["level"] == (dataRaw[id - 1]["level"]+1 )) {
-    //         return dataRaw;
-    //     }
-    //     // For loop to indent all child 
-    //     for (let index = id + 1; index < dataRaw.length; index++) {
-    //         if (dataRaw[id]["level"] == (dataRaw[index]["level"])) {
-    //             break;
-    //         }
-    //         dataRaw[index]["level"]++;
-    //     }
-    //     // update level
-    //     dataRaw[id]["level"] = dataRaw[id]["level"] + 1;
-    //     return dataRaw;
-    // }

@@ -15,7 +15,7 @@ const DeleteTask = async ({
     // get index of last child and splice till that
     let index = id;
     for (index = id + 1; index < dataRaw.length; index++) {
-        if (dataRaw[id]["level"] == (dataRaw[index]["level"])) {
+        if (dataRaw[id]["level"] <= (dataRaw[index]["level"])) {
             break;
         }
     }

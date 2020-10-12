@@ -6,7 +6,7 @@ const OutdentTask = async ({ id, dataRaw }) => {
     }
     // For loop to outdent all child 
     for (let index = id + 1; index < dataRaw.length; index++) {
-        if (dataRaw[id]["level"] == (dataRaw[index]["level"])) {
+        if (dataRaw[id]["level"] >= (dataRaw[index]["level"])) {
             break;
         }
         dataRaw[index]["level"]--;
