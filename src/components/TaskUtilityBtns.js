@@ -15,7 +15,9 @@ function TaskUtilityBtns({id, utilIndent, utilOutdent, utilDelete}) {
                     </button>
                     {/* Out Dent Icon */}
 
-                <button  onClick = {
+                <button
+                    data-toggle="tooltip" data-placement="top" title="indent"
+                    onClick={
                     () => {
                         utilOutdent(id)
                     }
@@ -48,7 +50,12 @@ function TaskUtilityBtns({id, utilIndent, utilOutdent, utilDelete}) {
                 </button>
 
                     {/* Delete Icon */}
-                    <button className="btn pl-0 pr-1 btn-task">
+                    < button onClick = {
+                        () => {
+                            utilDelete(id)
+                        }
+                    }
+                    className = "btn pl-0 pr-1 btn-task" >
                         <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-trash-fill"
                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd"
