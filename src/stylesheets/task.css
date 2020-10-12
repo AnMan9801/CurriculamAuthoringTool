@@ -8,30 +8,60 @@ Extra Defined classes
 
 /* Colors for levels */
 .task-l0{
-  color : rgb(47, 255, 220);
+  color : #00c6cc;
 }
 
 .task-l1{
-  color : rgb(105, 90, 90);
+  color : #212121;
 }
 
 .task-l2{
-  color : rgba(105, 87, 87, 0.5);
+  color : #767676;
 }
 
-/* padding for levels */
-#bootstrapOverride .task-p0{
-  padding-left: 0 !important;
-}
-#bootstrapOverride .task-p1{
-  padding-left: 1.5 rem !important;
-}
-.task-p2{
-  padding-left: 3 rem !important;
+.task-l3{
+  color : #e0e0e0;
 }
 
-
-.btn-task{
-  color: #00000060;
+.task-l0,.task-l1,.task-l2,.task-l3{
+  font-weight: 700;
+}
+::placeholder{
+  color : #bdbdbd;
 }
 
+/* To remove outline */
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Utility button styles */
+.btn-task,.text-inst{
+  color: #bdbdbd;
+}
+.btn-task:hover{
+  color: #00c6cc;
+  font-weight: 700;
+}
+
+/* row styles for each one */
+
+
+/* Add task button styles */
+.btn-addTask{
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2c70ac;
+}
+
+.btn-addTask:hover{
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2c70ac;
+}
+
+/* input */
+input:focus{
+  outline: none;
+}

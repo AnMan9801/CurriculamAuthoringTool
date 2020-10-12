@@ -86,7 +86,7 @@ export class Todo extends Component {
         
         return (
             <div className="container text-left">
-                <div className="row text-secondary font-weight-bold text-uppercase">
+                <div className="row font-weight-bold text-uppercase text-inst">
                     {this.props.subjectName}
                 </div>
 

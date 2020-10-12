@@ -15,7 +15,7 @@ function TaskInputBar({id,level,updateTask,rem,textTask}) {
                 type = "text"
                 placeholder = "Add standard here."
                 className = {
-                    `p-0 m-0 border-0 task-l${level}`
+                    `p-0 m-0 border-0 task-l${level>3 ? 3:level}`
                 }
                 value = {
                     `${textTask}`

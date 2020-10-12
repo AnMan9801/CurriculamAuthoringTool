@@ -6,7 +6,9 @@ function TaskUtilityBtns({id, utilIndent, utilOutdent, utilDelete}) {
 
                 <div className=" btn-group mr-2" role="group" aria-label="First group">
                     {/* Move Icon */}
-                    <button className="btn pl-0 pr-1 btn-task">
+                <button
+                    data-toggle="tooltip" data-placement="top" title="move"
+                    className="btn pl-0 pr-1 btn-task">
                         <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-arrows-move" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd"
@@ -16,7 +18,7 @@ function TaskUtilityBtns({id, utilIndent, utilOutdent, utilDelete}) {
                     {/* Out Dent Icon */}
 
                 <button
-                    data-toggle="tooltip" data-placement="top" title="indent"
+                    data-toggle="tooltip" data-placement="top" title="outdent"
                     onClick={
                     () => {
                         utilOutdent(id)
@@ -31,7 +33,9 @@ function TaskUtilityBtns({id, utilIndent, utilOutdent, utilDelete}) {
                     </button>
 
                     {/* Indent Icon */}
-                < button onClick = {
+                < button
+                    data-toggle="tooltip" data-placement="top" title="indent"
+                    onClick={
                     () => {
                         utilIndent(id)
                     }
@@ -50,7 +54,9 @@ function TaskUtilityBtns({id, utilIndent, utilOutdent, utilDelete}) {
                 </button>
 
                     {/* Delete Icon */}
-                    < button onClick = {
+                < button
+                    data-toggle="tooltip" data-placement="top" title="delete"
+                    onClick={
                         () => {
                             utilDelete(id)
                         }

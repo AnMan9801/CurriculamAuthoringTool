@@ -6,7 +6,7 @@ function TodoHeader() {
             <div className="col-2 pt-2 pb-2 pl-0 pr-5 text-capitalize text-wrap text-break">
                 <span className="font-weight-bolder">Actions</span>
                 <br />
-                <span className="text-secondary">
+                <span className="text-inst">
                     Move, indent, outdent, delete
                 </span>
             </div>
@@ -15,7 +15,7 @@ function TodoHeader() {
                 <div className="col-10">
                     <span className="font-weight-bolder text-capitaize">Standard</span>
                     <br />
-                    <span className="text-secondary">
+                    <span className="text-inst">
                         The text of the standard.
                     </span>
                 </div>
