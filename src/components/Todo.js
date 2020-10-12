@@ -69,7 +69,7 @@ export class Todo extends Component {
                 {/* <Task indent="0" updateTask={this.updateTask}/> */}
                 {
                     this.state.dataArray.map((task, index) => {
-                        return <Task key={index} id={index} indent={task.level} updateTask={this.updateTask}/>
+                        return <Task key={index} id={index} level={task.level} updateTask={this.updateTask}/>
                     } ,this)
                 }
                 
